@@ -114,7 +114,7 @@ function verify() {
     else {
         dispAns.style.color = "red";
         if (dispAns.innerHTML == "<b>Wrong Answer :(</b>") {
-            dispAns.innerHTML = "<b>WronAgain :(</b>";
+            dispAns.innerHTML = "<b>Wrong Again :(</b>";
         }
 
         else {
