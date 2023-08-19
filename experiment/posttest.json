@@ -56,8 +56,7 @@
         "difficulty": "beginner"
       },
       {
-        "question": "6. Consider $(7,4,4)$ RS code over Galois field 
-$\\mathbb{F}_{2^{3}} = \\{ 0, 1, \\alpha, \\alpha^{2}, \\alpha^{3} = 1+\\alpha, \\alpha^{4} = \\alpha+\\alpha^{2}, \\alpha^{5}=1+\\alpha+\\alpha^{2}, \\alpha^{6}= 1+\\alpha^{2}  \\}$ with evaluation set $ \\{\\alpha_{1} = 1, \\alpha_{2} = \\alpha, \\alpha_{3} = \\alpha^{2}, \\alpha_{4} = \\alpha^{3}, \\alpha_{5} = \\alpha^{4},\\alpha_{6} = \\alpha^{5}, \\alpha_{7} = \\alpha^{6} \\}$. Then the encoded message bit stream of $010110111100$ (same as the above question) is ",
+        "question": "6. Consider $(7,4,4)$ RS code over Galois field $\\mathbb{F}_{2^{3}} = \\{ 0, 1, \\alpha, \\alpha^{2}, \\alpha^{3} = 1+\\alpha, \\alpha^{4} = \\alpha+\\alpha^{2}, \\alpha^{5}=1+\\alpha+\\alpha^{2}, \\alpha^{6}= 1+\\alpha^{2}  \\}$ with evaluation set $ \\{\\alpha_{1} = 1, \\alpha_{2} = \\alpha, \\alpha_{3} = \\alpha^{2}, \\alpha_{4} = \\alpha^{3}, \\alpha_{5} = \\alpha^{4},\\alpha_{6} = \\alpha^{5}, \\alpha_{7} = \\alpha^{6} \\}$. Then the encoded message bit stream of $010110111100$ (same as the above question) is ",
         "answers": {
           "a": "$110101011001011010101$",
           "b": "$010011001101101000110$",
