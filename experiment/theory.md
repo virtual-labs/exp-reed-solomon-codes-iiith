@@ -83,18 +83,18 @@ Now, We will describe a few properties of MDS codes without proof.
 <br>
 Below, we will provide generator matrices for a code with the parameters $(n=5, k=3)$, one of which generates an MDS code while the other one does not.
 
-<b>Example 1.</b> <i>Let $ A = \begin{bmatrix} 
+<b>Example 1.</b> <i>Let  $$A = \begin{bmatrix} 
 1 & 0 & 0 & 1 & 2  \\
 0 & 1 & 0 & 0 & 1   \\
 0 & 0 & 1 & 6 & 3   
-\end{bmatrix}$, where the elements of the matrix $A$ belong to the finite field $\mathbb{F}_{7}$. We can easily verify that columns 1,2 and 3 are linearly independent, and columns 1,3 and 4 are linearly dependent. Therefore, $A$ is the generator matrix of the code $\mathcal{C}(5,3)$ but it is not MDS.</i>
+\end{bmatrix},$$  where the elements of the matrix $A$ belong to the finite field $\mathbb{F}_{7}$. We can easily verify that columns 1,2 and 3 are linearly independent, and columns 1,3 and 4 are linearly dependent. Therefore, $A$ is the generator matrix of the code $\mathcal{C}(5,3)$ but it is not MDS.</i>
 <br>
 <br>
-However, the matrix $ G = \begin{bmatrix} 
+However, the matrix  $$G = \begin{bmatrix} 
 1 & 4 & 2 & 2 & 1 \\
 1 & 1 & 6 & 1 & 6   \\
 1 & 2 & 4 & 4 & 1   
-\end{bmatrix}$ generates the $\mathcal{C}(5,3)$ MDS code. Since every set of three columns of $G$ is linearly independent.
+\end{bmatrix}$$ generates the $\mathcal{C}(5,3)$ MDS code. Since every set of three columns of $G$ is linearly independent.
 
 ## 3 &nbsp; &nbsp; Construction of RS Codes
 In this section, we will discuss the encoding procedure of RS codes. 
