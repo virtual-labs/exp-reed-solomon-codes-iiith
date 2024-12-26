@@ -76,6 +76,7 @@ function verify1() {
     else {
         obs1.style.color = "red";
         obs1.innerHTML = "<b>Wrong Answer :(</b>";
+        alert('Wrong Answer :(');
     }
 }
 
@@ -108,6 +109,7 @@ function verify2() {
         else {
             obs2.style.color = "red";
             obs2.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 
@@ -132,10 +134,12 @@ function verify2() {
             obs2.style.color = "red";
             if (obs2.innerHTML == "<b>Wrong Answer :(</b>") {
                 obs2.innerHTML = "<b>Wrong Again :(</b>";
+                alert('Wrong Again :(');
             }
 
             else {
                 obs2.innerHTML = "<b>Wrong Answer :(</b>";
+                alert('Wrong Answer :(');
             }
         }
     }
@@ -170,6 +174,7 @@ function verify3() {
         else {
             obs3.style.color = "red";
             obs3.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 
@@ -194,10 +199,12 @@ function verify3() {
             obs3.style.color = "red";
             if (obs3.innerHTML == "<b>Wrong Answer :(</b>") {
                 obs3.innerHTML = "<b>Wrong Again :(</b>";
+                alert('Wrong Again :(');
             }
 
             else {
                 obs3.innerHTML = "<b>Wrong Answer :(</b>";
+                alert('Wrong Answer :(');
             }
         }
     }
@@ -222,5 +229,6 @@ function verify4() {
     else {
         obs4.style.color = "red";
         obs4.innerHTML = "<b>Wrong Answer :(</b>";
+        alert('Wrong Answer :(');
     }
 }
