@@ -115,10 +115,12 @@ function verify() {
         dispAns.style.color = "red";
         if (dispAns.innerHTML == "<b>Wrong Answer :(</b>") {
             dispAns.innerHTML = "<b>Wrong Again :(</b>";
+            alert('Wrong Again :(');
         }
 
         else {
             dispAns.innerHTML = "<b>Wrong Answer :(</b>";
+            alert('Wrong Answer :(');
         }
     }
 }

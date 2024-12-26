@@ -140,7 +140,10 @@ Now we will verify that an $(n, k)$ RS code is MDS. Let $\mathbf{u} = \begin{bma
 
 The following example illustrates the construction of $(6,3)$ RS code over the Galois field $\mathbb{F}_{2^{3}}$. The elements of $\mathbb{F}_{2^{3}}$ are given in Table 1.
 <br>
-<img title="table1" src="./images/exp7_theory_table1.png">
+<div style="text-align: center;">
+    <img src="./images/exp7_theory_table1.png" alt="Construction of RS Code" style="display: block; margin: auto">
+</div>
+
 <br>
 <b>Example 2.</b> <i>A $(6, 3)$ RS code can be obtained by listing all polynomials of degree $2$ with coefficients in $\mathbb{F}_{2^{3}}$, and subsequently evaluating these polynomials at the chosen evaluation points from the finite field $\mathbb{F}_{2^{3}}$. Due to the Maximum Distance Separable (MDS) property of RS codes, the minimum distance $d_{\text{min}}$ is equal to $4$. Therefore, the code corrects one error.
 
