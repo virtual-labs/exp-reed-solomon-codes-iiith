@@ -1,162 +1,217 @@
 <!DOCTYPE html>
 <html>
-<html lang="en">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
+      />
+      <link rel="stylesheet" href="./css/main.css" />
+      <link rel="stylesheet" href="./css/rs-encoding.css" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
-	<link rel="stylesheet" href="./css/main.css">
-	<link rel="stylesheet" href="./css/rs-encoding.css">
+      <title>RS codes</title>
+    </head>
 
+    <body onload="getNumber()">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-one-quarter v-instruction-title">Tasks</div>
+          <div class="column">
+            <div class="v-tabs">
+              <ul>
+                <li id="Task1" onclick="window.location.href = 'index.html';">
+                  <a> MDS codes </a>
+                </li>
 
-	<title>
-		RS codes
-	</title>
-</head>
+                <li class="is-active" id="Task2">
+                  <a> Reed-Solomon Encoding-1 </a>
+                </li>
 
-<body onload="getNumber()">
+                <li
+                  id="Task3"
+                  onclick="window.location.href = 'rs-encoding-2.html';"
+                >
+                  <a> Reed-Solomon Encoding-2 </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-	<div class="container">
-		<div class="columns is-centered">
-			<div class="column is-one-quarter v-instruction-title">
-				Tasks
-			</div>
-			<div class="column">
-				<div class="v-tabs">
-					<ul>
-						<li id="Task1" onclick="window.location.href = 'index.html';">
-							<a>
-								MDS codes
-							</a>
-						</li>
+        <div class="columns is-centered">
+          <div class="column">
+            <div
+              class="v-collapsible-instruction-container v-instruction-container"
+            >
+              <div class="v-collapsible is-size-5">Instructions</div>
+              <div
+                class="v-content"
+                style="text-align: left; padding-left: 10%; padding-right: 10%"
+              >
+                <ul style="list-style: disc">
+                  <b>Quick theory overview:</b>
+                  <br />
+                  <img id="image" src="./images/GF(16).png" />
+                  <li>
+                    The message symbols are obtained by grouping the given
+                    message stream into 4-tuples based on the above table.
+                  </li>
+                </ul>
 
-						<li class="is-active" id="Task2">
-							<a>
-								Reed-Solomon Encoding-1
-							</a>
-						</li>
+                <br />
 
-						<li id="Task3" onclick="window.location.href = 'rs-encoding-2.html';">
-							<a>
-								Reed-Solomon Encoding-2
-							</a>
-						</li>
+                <ul style="list-style: disc">
+                  <b>Procedure:</b>
+                  <li>
+                    Typing alpha on the keyboard displays the symbol &alpha;.
+                  </li>
+                  <li>
+                    Expressions like &alpha;<sup>2</sup> can be entered in the
+                    field by typing alpha^2 on the keyboard.
+                  </li>
+                  <li>
+                    0, 1, alpha, alpha^2, ...,alpha^14 need to be entered in the
+                    fields in this task. Do not enter any other symbols.
+                  </li>
+                  <li>
+                    Enter the values in the fields and click on <b>Submit</b>.
+                  </li>
+                  <li>
+                    The correctness of the entered answer is displayed in
+                    <b>Observations</b>. Additionally, the message polynomial is
+                    also displayed in <b>Observations</b>.
+                  </li>
 
-					</ul>
-				</div>
-			</div>
-		</div>
+                  <li>
+                    <b>Next</b> - Displays the next example. Solve sufficient
+                    number of examples.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
 
-		<div class="columns is-centered">
-			<div class="column">
-				<div class="v-collapsible-instruction-container v-instruction-container">
-					<div class="v-collapsible is-size-5">Instructions</div>
-					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
-						<ul style="list-style: disc;">
-							<b>Quick theory overview:</b>
-							<br>
-							<img id="image" src="./images/GF(16).png">
-							<li>
-								The message symbols are obtained by grouping the given message stream into 4-tuples
-								based on the above table.
-							</li>
-						</ul>
+      <div class="columns is-centered">
+        <div class="column is-11-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container components-list">
+            <br />
+            <br />
+            <p>
+              Consider the finite field GF(2<sup>4</sup>) generated by the
+              polynomial x<sup>4</sup>+x+1. Group the message
+              <span id="message-bits" style="color: blue"></span> to obtain
+              message symbols of the field and enter their polynomial
+              representations.
+            </p>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
 
-						<br>
+      <div
+        class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+        style="margin-top: -1.5%"
+      >
+        <div class="column is-8-desktop is-12-tablet is-12-mobile">
+          <div class="box-question">
+            <br />
+            <form
+              action=""
+              id="form1"
+              method="get"
+              autocomplete="off"
+              onsubmit="return false"
+            >
+              <div class="mathfield">
+                <b>m<sub>0</sub></b
+                >=<input
+                  id="math-field-1"
+                  class="text-inp"
+                  oninput="this.value = this.value.replace(/\s+/g, '')"
+                  onkeyup="replaceAlpha(this)"
+                />
+              </div>
+              &nbsp;
+              <div class="mathfield">
+                <b>m<sub>1</sub></b
+                >=<input
+                  id="math-field-2"
+                  class="text-inp"
+                  oninput="this.value = this.value.replace(/\s+/g, '')"
+                  onkeyup="replaceAlpha(this)"
+                />
+              </div>
+              &nbsp;
+              <div class="mathfield">
+                <b>m<sub>2</sub></b
+                >=<input
+                  id="math-field-3"
+                  class="text-inp"
+                  oninput="this.value = this.value.replace(/\s+/g, '')"
+                  onkeyup="replaceAlpha(this)"
+                />
+              </div>
+              &nbsp;
+              <div class="mathfield">
+                <b>m<sub>3</sub></b
+                >=<input
+                  id="math-field-4"
+                  class="text-inp"
+                  oninput="this.value = this.value.replace(/\s+/g, '')"
+                  onkeyup="replaceAlpha(this)"
+                />
+              </div>
+              <br />
+              <br />
 
-						<ul style="list-style: disc;">
-							<b>Procedure:</b>
-							<li>
-								Typing alpha on the keyboard displays the symbol &alpha;.
-							</li>
-							<li>
-								Expressions like &alpha;<sup>2</sup> can be entered in the field by typing alpha^2 on
-								the keyboard.
-							</li>
-							<li>
-								0, 1, alpha, alpha^2, ...,alpha^14 need to be entered in the fields
-								in this task. Do not enter any other symbols.
-							</li>
-							<li>
-								Enter the values in the fields and click on <b>Submit</b>.
-							</li>
-							<li>
-								The correctness of the entered answer is displayed in <b>Observations</b>. Additionally,
-								the message polynomial is also displayed in <b>Observations</b>.
-							</li>
+              <button
+                class="v-button"
+                role="button"
+                form="form1"
+                onclick="verify()"
+              >
+                Submit
+              </button>
+              <button class="v-button" role="button" onclick="next()">
+                Next
+              </button>
+              <button class="v-button" role="button" onclick="resetForm1()">
+                Reset
+              </button>
+            </form>
+          </div>
+        </div>
 
-							<li>
-								<b>Next</b> - Displays the next example. Solve sufficient number of examples.
-							</li>
+        <div class="column is-3-desktop is-4-tablet is-12-mobile">
+          <div class="v-datalist-container components-list">
+            <div class="v-datalist-title">Observations</div>
+            <div id="observations">
+              <span id="dispAns"></span>
+              <span id="dispPol"></span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br>
-
-
-	<div class="columns is-centered">
-		<div class="column is-11-desktop is-12-tablet is-12-mobile">
-			<div class="v-datalist-container components-list">
-				<br>
-				<br>
-				<p>
-					Consider the finite field GF(2<sup>4</sup>) generated by the polynomial x<sup>4</sup>+x+1. Group the
-					message <span id="message-bits" style="color: blue;"></span> to obtain message symbols of the field and enter their polynomial representations.
-				</p>
-				<br>
-				<br>
-			</div>
-		</div>
-	</div>
-
-	<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
-		style="margin-top:-1.5%">
-		<div class="column is-8-desktop is-12-tablet is-12-mobile">
-
-			<div class="box-question">
-				<br>
-				<form action="" id="form1" method="get" autocomplete="off" onsubmit="return false">
-					<div class="mathfield"><b>m<sub>0</sub></b>=<input id="math-field-1" class="text-inp"
-							oninput="this.value = this.value.replace(/\s+/g, '')" onkeyup="replaceAlpha(this)"> </div>
-					&nbsp;
-					<div class="mathfield"><b>m<sub>1</sub></b>=<input id="math-field-2" class="text-inp"
-							oninput="this.value = this.value.replace(/\s+/g, '')" onkeyup="replaceAlpha(this)"></div>
-					&nbsp;
-					<div class="mathfield"><b>m<sub>2</sub></b>=<input id="math-field-3" class="text-inp"
-							oninput="this.value = this.value.replace(/\s+/g, '')" onkeyup="replaceAlpha(this)"></div>
-					&nbsp;
-					<div class="mathfield"><b>m<sub>3</sub></b>=<input id="math-field-4" class="text-inp"
-							oninput="this.value = this.value.replace(/\s+/g, '')" onkeyup="replaceAlpha(this)"></div>
-					<br>
-					<br>
-
-					<button class="v-button" role="button" form="form1" onclick="verify()"> Submit </button>
-					<button class="v-button" role="button" onclick="next()"> Next </button>
-				</form>
-			</div>
-		</div>
-
-
-		<div class="column is-3-desktop is-4-tablet is-12-mobile">
-			<div class="v-datalist-container components-list">
-				<div class="v-datalist-title">Observations</div>
-				<div id="observations">
-					<span id="dispAns"></span>
-					<span id="dispPol"></span>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
-	<script src="./js/rs-encoding-1.js"></script>
-</body>
-
+      <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+      <script src="./js/rs-encoding-1.js"></script>
+      <script>
+        function resetForm1() {
+          document.getElementById("math-field-1").value = "";
+          document.getElementById("math-field-2").value = "";
+          document.getElementById("math-field-3").value = "";
+          document.getElementById("math-field-4").value = "";
+          document.getElementById("dispAns").innerHTML = "";
+          document.getElementById("dispPol").innerHTML = "";
+        }
+      </script>
+    </body>
+  </html>
 </html>
