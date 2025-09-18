@@ -85,7 +85,8 @@ Now, We will describe a few properties of MDS codes without proof.
 <br>
 Below, we will provide generator matrices for a code with the parameters $(n=5, k=3)$, one of which generates an MDS code while the other one does not.
 
-<b>Example 1.</b> <i>Let $$A = \begin{bmatrix} 
+<b>Example 1.</b> <br>
+<i>Let $$A = \begin{bmatrix} 
 1 & 0 & 0 & 1 & 2  \\
 0 & 1 & 0 & 0 & 1   \\
 0 & 0 & 1 & 6 & 3   
@@ -150,17 +151,18 @@ The following example illustrates the construction of $(6,3)$ RS code over the G
 <br>
 
 <div style="text-align: center;" >
-    <img src="./images/exp7_theory_table1.png" alt="Construction of RS Code" style="display: block; margin: auto">
+    <img src="./images/exp7_theory_table1.png" alt="Construction of RS Code" style="display: block; margin: auto; max-width: 600px;">
 </div>
 
 <br>
-<b>Example 2.</b> <i>A $(6, 3)$ RS code can be obtained by listing all polynomials of degree $2$ with coefficients in $\mathbb{F}_{2^{3}}$, and subsequently evaluating these polynomials at the chosen evaluation points from the finite field $\mathbb{F}_{2^{3}}$. Due to the Maximum Distance Separable (MDS) property of RS codes, the minimum distance $d_{\text{min}}$ is equal to $4$. Therefore, the code corrects one error.
+<b>Example 2.</b> <br>
+<i>A $(6, 3)$ RS code can be obtained by listing all polynomials of degree $2$ with coefficients in $\mathbb{F}_{2^{3}}$, and subsequently evaluating these polynomials at the chosen evaluation points from the finite field $\mathbb{F}_{2^{3}}$. Due to the Maximum Distance Separable (MDS) property of RS codes, the minimum distance $d_{\text{min}}$ is equal to $4$. Therefore, the code corrects one error.
 
 Now we will illustrate an encoding of bit stream $ 010011111 $. Here $u_{0} = 010 = \alpha, u_{1} = 011 = \alpha^{4}, u_{2} = 111 = \alpha^{5} $ and the corresponding message polynomial is $ \mathbf{u}(X) = \alpha + \alpha^{4} X+ \alpha^{5} X^{2} \in \mathbb{F}_{2^{3}}[X]$.
 
 For this example, there are $7$ possible evaluation sets. Here we demonstrate the encoding of the above message $\mathbf{u} = \begin{bmatrix} \alpha & \alpha^{4} & \alpha^{5} \end{bmatrix}$ for two different evaluation sets.
 
-<b>1. For the evaluation set $ \{\alpha*{1} = \alpha, \alpha*{2} = \alpha^{2}, \ldots , \alpha*{6} = \alpha^{6} $ \}:</b>
+<b>1. For the evaluation set $ \{\alpha*{1} = \alpha, \alpha*{2} = \alpha^{2}, \ldots , \alpha*{6} = \alpha^{6} $ \}:</b> <br>
 Now the codeword of the given message $\mathbf{u} = \begin{bmatrix} \alpha & \alpha^{4} & \alpha^{5} \end{bmatrix}$ is obtained for the given evaluation set $ \alpha*{1} = \alpha, \alpha*{2} = \alpha^{2}, \ldots , \alpha*{6} = \alpha^{6} $ as follows:
 
 $$
@@ -206,7 +208,7 @@ $$
 
 Hence the encoded bit stream of $ 010011111 $ is $001110101101001010$.
 
-<b>2. For the evaluation set $ \{\alpha*{1} = 1, \alpha*{2} = \alpha^{}, \alpha*{3} = \alpha^{2} \ldots , \alpha*{6} = \alpha^{5} $ \}:</b>
+<b>2. For the evaluation set $ \{\alpha*{1} = 1, \alpha*{2} = \alpha^{}, \alpha*{3} = \alpha^{2} \ldots , \alpha*{6} = \alpha^{5} $ \}:</b> <br>
 Now the codeword of the given message $u = [\alpha, \alpha^{4}, \alpha^{5} ]$ is obtained for the given evaluation set $ \alpha*{1} = \alpha, \alpha*{2} = \alpha^{2}, \ldots , \alpha\_{6} = \alpha^{5} $ as follows:
 
 $$
