@@ -1,2 +1,1 @@
-### References
-[1] Moon, Todd K, “Error correction coding: mathematical methods and algorithms”. John Wiley & Sons, 2020.
+1. Moon, Todd K, _Error correction coding: mathematical methods and algorithms_. John Wiley & Sons, 2020.

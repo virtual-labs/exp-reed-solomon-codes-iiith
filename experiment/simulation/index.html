@@ -208,6 +208,7 @@
 						<button class="v-button" role="button" onclick="verify1()" form="form1"> Submit
 						</button>
 						<button class="v-button" role="button" onclick="page2()"> Next </button>
+						<button class="v-button" role="button" onclick="resetForm1()"> Reset </button>
 					</form>
 				</div>
 			</div>
@@ -318,6 +319,7 @@
 						</button>
 						<button class="v-button" role="button" onclick="page1()"> Previous </button>
 						<button class="v-button" role="button" onclick="page3()"> Next </button>
+						<button class="v-button" role="button" onclick="resetForm2()"> Reset </button>
 					</form>
 				</div>
 			</div>
@@ -433,6 +435,7 @@
 						</button>
 						<button class="v-button" role="button" onclick="page2()"> Previous </button>
 						<button class="v-button" role="button" onclick="page4()"> Next </button>
+						<button class="v-button" role="button" onclick="resetForm3()"> Reset </button>
 					</form>
 				</div>
 			</div>
@@ -600,6 +603,7 @@
 						<button class="v-button" role="button" onclick="verify4()" form="form4"> Submit
 						</button>
 						<button class="v-button" role="button" onclick="page3()"> Previous </button>
+						<button class="v-button" role="button" onclick="resetForm4()"> Reset </button>
 					</form>
 				</div>
 			</div>
@@ -619,6 +623,24 @@
 
 	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
 	<script src="./js/mds.js"></script>
+	<script>
+function resetForm1() {
+    document.getElementById('choose1').value = 'select';
+    document.getElementById('observations1').innerHTML = '';
+}
+function resetForm2() {
+    document.getElementById('choose2').value = 'select';
+    document.getElementById('observations2').innerHTML = '';
+}
+function resetForm3() {
+    document.getElementById('choose3').value = 'select';
+    document.getElementById('observations3').innerHTML = '';
+}
+function resetForm4() {
+    document.getElementById('choose4').value = 'select';
+    document.getElementById('observations4').innerHTML = '';
+}
+</script>
 </body>
 
 </html>
