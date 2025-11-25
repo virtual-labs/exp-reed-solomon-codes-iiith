@@ -1,0 +1,26 @@
+
+/home/runner/work/exp-reed-solomon-codes-iiith/exp-reed-solomon-codes-iiith/experiment/simulation/js/mds.js
+    1:10  warning  'select' is defined but never used   no-unused-vars
+   10:10  warning  'page1' is defined but never used    no-unused-vars
+   19:10  warning  'page2' is defined but never used    no-unused-vars
+   35:10  warning  'page3' is defined but never used    no-unused-vars
+   51:10  warning  'page4' is defined but never used    no-unused-vars
+   60:10  warning  'verify1' is defined but never used  no-unused-vars
+   83:10  warning  'verify2' is defined but never used  no-unused-vars
+  148:10  warning  'verify3' is defined but never used  no-unused-vars
+  213:10  warning  'verify4' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-reed-solomon-codes-iiith/exp-reed-solomon-codes-iiith/experiment/simulation/js/rs-encoding-1.js
+   14:14  warning  'i' is already defined                    no-redeclare
+   29:10  warning  'verify' is defined but never used        no-unused-vars
+  139:10  warning  'next' is defined but never used          no-unused-vars
+  150:10  warning  'replaceAlpha' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-reed-solomon-codes-iiith/exp-reed-solomon-codes-iiith/experiment/simulation/js/rs-encoding-2.js
+    7:10  warning  'verify' is defined but never used        no-unused-vars
+  126:18  warning  'i' is already defined                    no-redeclare
+  131:18  warning  'i' is already defined                    no-redeclare
+  231:10  warning  'replaceAlpha' is defined but never used  no-unused-vars
+
+✖ 17 problems (0 errors, 17 warnings)
+
