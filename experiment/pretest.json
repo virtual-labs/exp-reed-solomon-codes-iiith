@@ -13,7 +13,7 @@
         "a": "Incorrect. $(7,3,5)$ satisfies the Singleton bound for MDS codes.",
         "b": "Incorrect. $(63,57,7)$ can be an MDS code if the field size is sufficient.",
         "c": "Incorrect. $(255,249,7)$ can be an MDS code over a large enough field.",
-        "d": "Correct! $(15,8,7)$ does not satisfy the Singleton bound $d_{min} \\leq n-k+1$ for MDS codes."
+        "d": "Correct! $(15,8,7)$ does not satisfy the Singleton bound $d_{min} leq n-k+1$ for MDS codes."
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
@@ -85,7 +85,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "6. Which of the following is evaluation set of $(6,3,4)$ RS code over the field $  \\mathbb{F}_{2^{3}} = \\{ 0, 1, \\alpha, \\alpha^{2}, \\alpha^{3} = 1+\\alpha, \\alpha^{4} = \\alpha+\\alpha^{2}, \\alpha^{5}=1+\\alpha+\\alpha^{2}, \\alpha^{6}= 1+\\alpha^{2}  \\}$?",
+      "question": "6. Which of the following is evaluation set of $(6,3,4)$ RS code over the filed $  \\mathbb{F}_{2^{3}} = \\{ 0, 1, \\alpha, \\alpha^{2}, \\alpha^{3} = 1+\\alpha, \\alpha^{4} = \\alpha+\\alpha^{2}, \\alpha^{5}=1+\\alpha+\\alpha^{2}, \\alpha^{6}= 1+\\alpha^{2}  \\}$?",
       "answers": {
         "a": "$\\{ \\alpha, \\alpha^{3}, \\alpha^{4}, \\alpha^{5}, \\alpha, 1  \\}$",
         "b": "$\\{ \\alpha, \\alpha^{3}, \\alpha^{4}, \\alpha^{5}, \\alpha^{6}, 1+\\alpha  \\}$",
@@ -100,108 +100,6 @@
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
-    },
-    {
-      "question": "7. For an $(n,k)$ Reed-Solomon code, the minimum distance $d_{min}$ is",
-      "answers": {
-        "a": "$d_{min} = k+1$",
-        "b": "$d_{min} = n-k$",
-        "c": "$d_{min} = n-k+1$",
-        "d": "$d_{min} = 2k-n$"
-      },
-      "explanations": {
-        "a": "Incorrect. This does not match the Singleton bound for RS codes.",
-        "b": "Incorrect. This is one less than the actual minimum distance.",
-        "c": "Correct! RS codes are MDS codes, so $d_{min} = n-k+1$.",
-        "d": "Incorrect. This formula does not apply to RS codes."
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "8. A message polynomial $\\mathbf{u}(X) = u_0 + u_1X + u_2X^2$ over $\\mathbb{F}_{2^3}$ can have at most how many roots in $\\mathbb{F}_{2^3}$?",
-      "answers": {
-        "a": "2",
-        "b": "3",
-        "c": "4",
-        "d": "7"
-      },
-      "explanations": {
-        "a": "Correct! A polynomial of degree 2 can have at most 2 roots.",
-        "b": "Incorrect. A degree-2 polynomial cannot have 3 roots.",
-        "c": "Incorrect. A degree-2 polynomial cannot have 4 roots.",
-        "d": "Incorrect. This is the size of the field, not the maximum number of roots."
-      },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "9. Which property is NOT true for MDS codes?",
-      "answers": {
-        "a": "Every set of $k$ columns of the generator matrix is linearly independent",
-        "b": "The dual of an MDS code is also MDS",
-        "c": "Every set of $n-k$ columns of the parity check matrix is linearly independent",
-        "d": "All codewords have weight exactly equal to $d_{min}$"
-      },
-      "explanations": {
-        "a": "Incorrect. This is a true property of MDS codes.",
-        "b": "Incorrect. This is a true property of MDS codes.",
-        "c": "Incorrect. This is a true property of MDS codes.",
-        "d": "Correct! Not all codewords have the same weight; only the minimum weight is $d_{min}$."
-      },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "10. For a $(7,4,4)$ RS code over $\\mathbb{F}_{2^3}$, how many errors can be corrected?",
-      "answers": {
-        "a": "1",
-        "b": "2",
-        "c": "3",
-        "d": "4"
-      },
-      "explanations": {
-        "a": "Correct! With $d_{min}=4$, the code can correct $\\lfloor \\frac{4-1}{2} \\rfloor = 1$ error.",
-        "b": "Incorrect. The code cannot correct 2 errors with $d_{min}=4$.",
-        "c": "Incorrect. The code cannot correct 3 errors with $d_{min}=4$.",
-        "d": "Incorrect. The code cannot correct 4 errors with $d_{min}=4$."
-      },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "11. Given a $(15,11)$ RS code over $\\mathbb{F}_{2^4}$, what is the minimum Hamming distance?",
-      "answers": {
-        "a": "4",
-        "b": "5",
-        "c": "6",
-        "d": "7"
-      },
-      "explanations": {
-        "a": "Incorrect. Use the formula $d_{min} = n-k+1$.",
-        "b": "Correct! $d_{min} = 15-11+1 = 5$.",
-        "c": "Incorrect. Check the calculation.",
-        "d": "Incorrect. Check the calculation."
-      },
-      "correctAnswer": "b",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "12. If the evaluation set for an RS code contains consecutive powers of $\\alpha$ starting from $\\alpha^0=1$, what special property does this code have?",
-      "answers": {
-        "a": "It becomes a binary code",
-        "b": "It becomes a cyclic code",
-        "c": "It becomes a convolutional code",
-        "d": "It loses the MDS property"
-      },
-      "explanations": {
-        "a": "Incorrect. The code remains over the same field.",
-        "b": "Correct! When the evaluation set consists of consecutive powers starting from 1, the RS code becomes cyclic.",
-        "c": "Incorrect. RS codes are block codes, not convolutional codes.",
-        "d": "Incorrect. The MDS property is retained."
-      },
-      "correctAnswer": "b",
-      "difficulty": "advanced"
     }
   ]
 }
