@@ -1,13 +1,646 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+<html lang="en">
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/mds.css">
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+	<title>
+		MDS codes
+	</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-one-quarter v-instruction-title">
+				Tasks
+			</div>
+			<div class="column">
+				<div class="v-tabs">
+					<ul>
+						<li class="is-active" id="Task1">
+							<a>
+								MDS Codes
+							</a>
+						</li>
+
+						<li id="Task2" onclick="window.location.href = 'rs-encoding-1.html';">
+							<a>
+								Reed-Solomon Encoding-1
+							</a>
+						</li>
+
+						<li id="Task3" onclick="window.location.href = 'rs-encoding-2.html';">
+							<a>
+								Reed-Solomon Encoding-2
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered">
+			<div class="column">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div class="v-collapsible is-size-5">Instructions</div>
+					<div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+						<ul style="list-style: disc;">
+							<b>Quick theory overview:</b>
+							<li>
+								Every set of \(k\) columns in any generator matrix of an MDS code are linearly
+								independent.
+							</li>
+							<li>
+								Every set of \(n-k\) columns in any parity check matrix of an MDS code are linearly
+								independent.
+							</li>
+						</ul>
+
+						<br>
+
+						<ul style="list-style: disc;">
+							<b>Procedure:</b>
+							<li>
+								Choose one of the options from the drop-down and click on <b>Submit</b>.
+							</li>
+							<li>
+								The correctness of the chosen option will be displayed in <b>Observations</b>.
+							</li>
+							<li>
+								If the matrix given is a generator matrix of an MDS code proceed to the next example.
+							</li>
+							<li>
+								If the matrix given is not a generator matrix of an MDS code, a message prompting the
+								selection of the linearly dependent columns will be displayed in <b>Observations</b>.
+							</li>
+							<li>
+								Clicking on a column changes its color to yellow indicating that the column has been selected.
+							</li>
+							<li>
+								To deselect a column, click on it again.
+							</li>
+							<li>
+								Select all the linearly dependent columns and click on <b>Submit</b>.
+							</li>
+							<li>
+								The correctness of the answer is displayed in <b>Observations</b>.
+							</li>
+							<li>
+								<b>Next</b> - Displays the next example.
+							</li>
+							<li>
+								<b>Previous</b> - Displays the previous example.
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+
+	<section id="example1">
+		<div class="columns is-centered">
+			<div class="column is-11-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<br>
+					<br>
+					<p>Consider a linear block code \(\mathcal{C}\) defined over \(\mathbb{F}_{7}\).</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+			style="margin-top:-1.5%">
+			<div class="column is-8-desktop is-12-tablet is-12-mobile">
+				<div class="box-question">
+
+					<div id="table">
+						\(G&nbsp;=&nbsp;\)&nbsp;
+						<table>
+							<tr>
+								<td class="topLeft"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="bottomLeft"> &nbsp; </td>
+							</tr>
+
+							<tr>
+								<td> 1 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+							</tr>
+
+							<tr>
+								<td> 0 </td>
+								<td> 1 </td>
+								<td> 0 </td>
+							</tr>
+
+							<tr>
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr>
+								<td> 1 </td>
+								<td> 4 </td>
+								<td> 3 </td>
+							</tr>
+
+							<tr>
+								<td> 3 </td>
+								<td> 6 </td>
+								<td> 6 </td>
+							</tr>
+
+							<tr>
+								<td> 6 </td>
+								<td> 6 </td>
+								<td> 3 </td>
+							</tr>
+
+							<tr>
+								<td> 3 </td>
+								<td> 4 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr>
+								<td class="topRight"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="bottomRight"> &nbsp; </td>
+							</tr>
+
+						</table>
+					</div>
+
+					<br>
+					<form action="" method="get" id="form1" onsubmit="return false" style="display: block;">
+
+						<p>Does the above generator matrix correspond to an MDS code?
+
+							<label></label>
+							<select id="choose1">
+								<option value="select">--- Select ---</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<br>
+							<br>
+						</p>
+
+						<button class="v-button" role="button" onclick="verify1()" form="form1"> Submit
+						</button>
+						<button class="v-button" role="button" onclick="page2()"> Next </button>
+						<button class="v-button" role="button" onclick="resetForm1()"> Reset </button>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="column is-3-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Observations</div>
+					<div id="observations1">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="example2" style="display: none;">
+		<div class="columns is-centered">
+			<div class="column is-11-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<br>
+					<br>
+					<p>Consider a linear block code \(\mathcal{C}\) defined over \(\mathbb{F}_{5}\).</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+			style="margin-top:-1.5%">
+			<div class="column is-8-desktop is-12-tablet is-12-mobile">
+				<div class="box-question">
+
+					<div id="table">
+						\(G&nbsp;=&nbsp;\)&nbsp;
+						<table>
+							<tr>
+								<td class="topLeft"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="bottomLeft"> &nbsp; </td>
+							</tr>
+
+							<tr id="ex2-col1" onclick="select(id)" style="pointer-events:none">
+								<td> 1 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+							</tr>
+
+							<tr id="ex2-col2" onclick="select(id)" style="pointer-events:none">
+								<td> 0 </td>
+								<td> 1 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+							</tr>
+
+							<tr id="ex2-col3" onclick="select(id)" style="pointer-events:none">
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 1 </td>
+								<td> 0 </td>
+
+							</tr>
+
+							<tr id="ex2-col4" onclick="select(id)" style="pointer-events:none">
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr id="ex2-col5" onclick="select(id)" style="pointer-events:none">
+								<td> 0 </td>
+								<td> 1 </td>
+								<td> 3 </td>
+								<td> 2 </td>
+							</tr>
+
+
+							<tr>
+								<td class="topRight"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="bottomRight"> &nbsp; </td>
+							</tr>
+
+						</table>
+					</div>
+
+					<br>
+					<form action="" method="get" id="form2" onsubmit="return false" style="display: block;">
+
+						<p>Does the above generator matrix correspond to an MDS code?
+
+							<label></label>
+							<select id="choose2">
+								<option value="select">--- Select ---</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<br>
+							<br>
+						</p>
+
+						<button class="v-button" role="button" onclick="verify2()" form="form2"> Submit
+						</button>
+						<button class="v-button" role="button" onclick="page1()"> Previous </button>
+						<button class="v-button" role="button" onclick="page3()"> Next </button>
+						<button class="v-button" role="button" onclick="resetForm2()"> Reset </button>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="column is-3-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Observations</div>
+					<div id="observations2">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="example3" style="display: none;">
+		<div class="columns is-centered">
+			<div class="column is-11-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<br>
+					<br>
+					<p>Consider a linear block code \(\mathcal{C}\) defined over \(\mathbb{F}_{7}\).</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+			style="margin-top:-1.5%">
+			<div class="column is-8-desktop is-12-tablet is-12-mobile">
+				<div class="box-question">
+
+					<div id="table">
+						\(H&nbsp;=&nbsp;\)&nbsp;
+						<table>
+							<tr>
+								<td class="topLeft"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="bottomLeft"> &nbsp; </td>
+							</tr>
+
+							<tr id="ex3-col1" onclick="select(id)" style="pointer-events:none">
+								<td> 1 </td>
+								<td> 4 </td>
+								<td> 3 </td>
+								<td> 2 </td>
+							</tr>
+
+							<tr id="ex3-col2" onclick="select(id)" style="pointer-events:none">
+								<td> 2 </td>
+								<td> 1 </td>
+								<td> 4 </td>
+								<td> 3 </td>
+							</tr>
+
+							<tr id="ex3-col3" onclick="select(id)" style="pointer-events:none">
+								<td> 3 </td>
+								<td> 2 </td>
+								<td> 1 </td>
+								<td> 4 </td>
+							</tr>
+
+							<tr id="ex3-col4" onclick="select(id)" style="pointer-events:none">
+								<td> 4 </td>
+								<td> 3 </td>
+								<td> 2 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr id="ex3-col5" onclick="select(id)" style="pointer-events:none">
+								<td> 3 </td>
+								<td> 3 </td>
+								<td> 3 </td>
+								<td> 3 </td>
+							</tr>
+
+							<tr id="ex3-col6" onclick="select(id)" disabled>
+								<td> 0 </td>
+								<td> 3 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+							</tr>
+
+							<tr>
+								<td class="topRight"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="bottomRight"> &nbsp; </td>
+							</tr>
+
+						</table>
+					</div>
+
+					<br>
+					<form action="" method="get" id="form3" onsubmit="return false" style="display: block;">
+
+						<p>Does the above parity check matrix correspond to an MDS code?
+
+							<label></label>
+							<select id="choose3">
+								<option value="select">--- Select ---</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<br>
+							<br>
+						</p>
+
+						<button class="v-button" role="button" onclick="verify3()" form="form3"> Submit
+						</button>
+						<button class="v-button" role="button" onclick="page2()"> Previous </button>
+						<button class="v-button" role="button" onclick="page4()"> Next </button>
+						<button class="v-button" role="button" onclick="resetForm3()"> Reset </button>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="column is-3-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Observations</div>
+					<div id="observations3">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="example4" style="display: none;">
+		<div class="columns is-centered">
+			<div class="column is-11-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<br>
+					<br>
+					<p>Consider a linear block code \(\mathcal{C}\) defined over \(\mathbb{F}_{11}\).</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start"
+			style="margin-top:-1.5%">
+			<div class="column is-8-desktop is-12-tablet is-12-mobile">
+				<div class="box-question">
+
+					<div id="table">
+						<p>
+							\(H&nbsp;=&nbsp;\)&nbsp;
+						<table>
+							<tr>
+								<td class="topLeft"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="left"> &nbsp; </td>
+								<td class="bottomLeft"> &nbsp; </td>
+							</tr>
+
+							<tr>
+								<td> 1 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+								<td> 0 </td>
+							</tr>
+
+							<tr>
+								<td> 1 </td>
+								<td> 1 </td>
+								<td> 1 </td>
+								<td> 1 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr>
+								<td> 2 </td>
+								<td> 4 </td>
+								<td> 8 </td>
+								<td> 5 </td>
+								<td> 10 </td>
+
+
+							</tr>
+
+							<tr>
+								<td> 3 </td>
+								<td> 9 </td>
+								<td> 5 </td>
+								<td> 4 </td>
+								<td> 1 </td>
+
+							</tr>
+
+							<tr>
+								<td> 4 </td>
+								<td> 5 </td>
+								<td> 9 </td>
+								<td> 3 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr>
+								<td> 5 </td>
+								<td> 3 </td>
+								<td> 4 </td>
+								<td> 9 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr>
+								<td> 6 </td>
+								<td> 3 </td>
+								<td> 7 </td>
+								<td> 9 </td>
+								<td> 10 </td>
+							</tr>
+
+							<tr>
+								<td> 7 </td>
+								<td> 5 </td>
+								<td> 2 </td>
+								<td> 3 </td>
+								<td> 10 </td>
+							</tr>
+
+							<tr>
+								<td> 8 </td>
+								<td> 9 </td>
+								<td> 6 </td>
+								<td> 4 </td>
+								<td> 10 </td>
+							</tr>
+
+							<tr>
+								<td> 9 </td>
+								<td> 4 </td>
+								<td> 3 </td>
+								<td> 5 </td>
+								<td> 1 </td>
+							</tr>
+
+							<tr>
+								<td> 10 </td>
+								<td> 1 </td>
+								<td> 10 </td>
+								<td> 1 </td>
+								<td> 10 </td>
+							</tr>
+
+							<tr>
+								<td class="topRight"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="right"> &nbsp; </td>
+								<td class="bottomRight"> &nbsp; </td>
+							</tr>
+
+						</table>
+						</p>
+					</div>
+
+					<br>
+					<form action="" method="get" id="form4" onsubmit="return false" style="display: block;">
+
+						<p>Does the above parity check matrix correspond to an MDS code?
+
+							<label></label>
+							<select id="choose4">
+								<option value="select">--- Select ---</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+							<br>
+							<br>
+						</p>
+
+						<button class="v-button" role="button" onclick="verify4()" form="form4"> Submit
+						</button>
+						<button class="v-button" role="button" onclick="page3()"> Previous </button>
+						<button class="v-button" role="button" onclick="resetForm4()"> Reset </button>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="column is-3-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Observations</div>
+					<div id="observations4">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+	<script src="./js/mds.js"></script>
+	<script>
+function resetForm1() {
+    document.getElementById('choose1').value = 'select';
+    document.getElementById('observations1').innerHTML = '';
+}
+function resetForm2() {
+    document.getElementById('choose2').value = 'select';
+    document.getElementById('observations2').innerHTML = '';
+}
+function resetForm3() {
+    document.getElementById('choose3').value = 'select';
+    document.getElementById('observations3').innerHTML = '';
+}
+function resetForm4() {
+    document.getElementById('choose4').value = 'select';
+    document.getElementById('observations4').innerHTML = '';
+}
+</script>
 </body>
+
 </html>
